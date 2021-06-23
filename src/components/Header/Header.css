@@ -1,0 +1,8 @@
+.header__language {
+    align-self: flex-start;
+}
+
+.header__money-container {
+    width: 100%;
+    align-self: flex-end;
+}

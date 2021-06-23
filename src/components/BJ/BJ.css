@@ -1,0 +1,1700 @@
+body {
+    background: url('../../images/sloybg.png');
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.App {
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100vw;
+  }
+  
+  .App__background {
+    background: url('../../images/full1.png') center no-repeat;
+    max-width: 1600px;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    box-shadow: 0 -20px 100px 50px inset black;
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+  }
+  
+  .header {
+    max-width: 1357px;
+    margin: 0 auto;
+    color:white;
+    min-height: 165px;
+    display: flex;
+    align-items: flex-end;
+  }
+  
+  .header__content-logo {
+    align-self: flex-end;
+  }
+  
+  .container {
+    width:calc(100% - 12px * 2);
+    margin:  0 auto;
+  }
+  
+  .header__text-content {
+    align-self:center;
+  }
+  
+  .header__subtitle {
+    margin:0;
+    text-transform: uppercase;
+    margin-right: 10px;
+  }
+  
+  .header__link {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .popup__message {
+    position: absolute;
+    left: 0;
+    top:0;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    opacity: 0;
+  }
+  
+  .popup__message_container {
+    background: rgba(255, 255, 255, .7);
+     width: 50%;
+    height:50%;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    z-index: 10;
+    transform: translate(-50%, -50%); 
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .popup__winner_close {
+    position: absolute;
+    top:10px;
+    right: 10px;
+    cursor: pointer;
+  }
+  
+  .header__link:focus {
+    text-decoration: underline;
+  }
+  
+  .header__subtitle:last-of-type {
+    margin-right: 0;
+  }
+  
+  .header__title {
+    margin: 0 0 20px 0;
+    text-transform: uppercase;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+  }
+  
+  .header__content {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    min-height: 163px;
+  }
+  
+  .main {
+    color:white;
+    position: relative;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center; */
+   
+  }
+  
+  .rules {
+    text-align: center;
+    margin: 10px 0 0 0;
+    font-size: 20px;
+    font-weight: normal;
+  }
+  
+  .rules__link {
+    color:rgb(192, 189, 189)
+  }
+  
+  .container-main {
+    /* width:calc(100% - 392px * 2); */
+    max-width: 1145px;
+    margin: 0 auto;
+   
+  }
+  
+  .main__wrapper {
+    display: flex;
+    /* margin-top: 69px; */
+    justify-content: space-around;
+    height: 455px;
+    align-items: center;
+  }
+  
+  .main__container {
+    display: flex;
+    flex-direction: column;
+    /* position: relative;
+    right: 58px; */
+  }
+  
+  .field-one {
+    width: 308px;
+    height: 154px;
+    background: rgb(8,135,154);
+    border-radius: 5px;
+    border:1px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  
+  .field-one__dialer {
+    font-size: 60px;
+    font-weight: 200;
+    text-shadow: 2px 2px 3px rgba(8,135,154,0.9);
+    color: rgba(0,0,0,0.4);
+    position: absolute;
+    text-transform: uppercase;
+  }
+  
+  .field-two {
+    width: 308px;
+    height: 154px;
+    background: rgb(8,135,154);
+    border:1px solid white;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  
+  .score {
+    width: 100px;
+    height: 37px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+  }
+  
+  .score-red {
+    background: rgb(124, 124, 124);
+    box-shadow: 0px 2px 4px 0 inset rgb(95, 95, 95);
+  }
+  
+  .score-black {
+    background: rgb(7, 109, 124);
+    box-shadow: 0px 2px 4px 0 inset rgb(6, 91, 104);
+  }
+  
+  .score-blue {
+    background:rgb(8,135,154);
+    box-shadow: 0px 2px 4px 0 inset rgb(6, 91, 104);
+  }
+  
+  .win {
+    font-size: 16px;
+    margin:0;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  
+  .data-play {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* position: relative;
+    left: 30px; */
+    margin-right: -88px;
+    margin-left: 130px;
+    
+  }
+  
+  .data-play__general {
+    margin-bottom: 20px;
+  }
+  
+  .data-play__general:last-of-type {
+    margin-bottom: 0;
+  }
+  
+  .main__container_one {
+    display: flex;
+    margin-bottom: 10px;
+    align-items: center;
+  }
+  
+  .main__container_two {
+  display: flex;
+  align-items: center;
+  }
+  
+  .main__container_number {
+    width:66px;
+    height: 66px;
+    background: rgb(8,135,154);
+    box-shadow: 0px 5px 6px inset rgb(5, 95, 109);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    font-size: 30px;
+    /* position: relative;
+    left: 20px; */
+    margin-left: 20px;
+    z-index: 0;
+  }
+  
+  .main__kol {
+    background: url('../../images/cards/deck.png') center no-repeat;
+    width: 144px;
+    height: 156px;
+    z-index: 4;
+    background-size: 136px;
+  }
+  
+  .main__sewitch {
+  width: 160px;
+  height: 40px;
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 25px;
+  cursor: pointer;
+  text-transform: uppercase;
+  }
+  
+  .main__sewitch:last-of-type {
+    margin-bottom:15px;
+  }
+  
+  .switch-one {
+    margin-top: 37px; 
+  }
+  
+  .red {
+    /* background: rgb(199, 4, 4); */
+    background: -webkit-linear-gradient(rgb(241, 57, 57) 0%, rgb(199, 4, 4) 100%);
+    background: -moz-linear-gradient(rgb(241, 57, 57) 0%, rgb(199, 4, 4) 100%);
+    background: -o-linear-gradient(rgb(241, 57, 57) 0%, rgb(199, 4, 4) 100%);
+    background: linear-gradient(rgb(241, 57, 57) 0%, rgb(199, 4, 4) 100%);
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, .2);
+  }
+  
+  .red:active {
+    background: rgba(199, 4, 4, 0.7);
+  }
+  
+  .green {
+    background: -webkit-linear-gradient(rgb(133, 228, 32) 0%, rgb(97, 164, 23) 100%);
+    background: -moz-linear-gradient(rgb(133, 228, 32) 0%, rgb(97, 164, 23) 100%);
+    background: -o-linear-gradient(rgb(133, 228, 32) 0%, rgb(97, 164, 23) 100%);
+    background: linear-gradient(rgb(133, 228, 32) 0%, rgb(97, 164, 23) 100%);
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, .2);
+  }
+  
+  .green:active {
+    background: rgba(107, 142, 35, 0.7);
+  }
+  
+  .wrapper-card {
+    position: relative;
+    right: 116px;z-index: 4;
+    margin-left:33px;
+    margin-right: 56px;
+  }
+  
+  .logo {
+    position: relative;
+  }
+  
+  .logo-bar {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .baks {
+    object-fit: contain;
+  }
+  
+  /* .container-rate {
+    width:calc(100% - 322px * 2);
+    margin: 0 auto;
+  } */
+  
+  .rate-container {
+    margin: 68px auto 0 auto;
+    height: 70px;
+    background: rgb(173, 172, 172, 0.4);
+    border-radius: 5px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    max-width: 900px;
+  }
+  
+  .button-rate {
+    width:180px;
+    height: 40px;
+    background: -webkit-linear-gradient(rgb(133, 228, 32) 0%, rgb(97, 164, 23) 100%);
+    background: -moz-linear-gradient(rgb(133, 228, 32) 0%, rgb(97, 164, 23) 100%);
+    background: -o-linear-gradient(rgb(133, 228, 32) 0%, rgb(97, 164, 23) 100%);
+    background: linear-gradient(rgb(133, 228, 32) 0%, rgb(97, 164, 23) 100%);
+    color: white;
+    border: none;
+    border-radius: 3px;
+    font-size: 15px;
+    text-transform: uppercase;
+    margin: 0 20px 0 70px;
+    cursor: pointer;
+  }
+  
+  .button-del-rate {
+    width:60px;
+    height: 40px;
+    border: none;
+    background-color:rgb(199, 4, 4);
+    background-image: url('../../images/del.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-left: 10px;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  .input-rate {
+    height: 40px;
+    border: 1px solid rgb(121, 121, 121);
+    font-size: 25px;
+    background-color:rgb(200, 200, 200, 0.6);
+    box-shadow: 0 0 5px black inset;
+    color: white;
+    padding-left: 10px;
+    width: 200px;
+    margin-right: 50px;
+    display: flex;
+    
+    align-items: center;
+  }
+  
+  
+  
+  .span-rate {
+    color: white;
+    margin-right: 10px;
+  }
+  
+  .popup {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top:0;
+    left: 0;
+    background-color: rgb(2 2 2 / 30%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.25s linear;
+    z-index: 10;
+  }
+  
+  
+  
+  .popup__container {
+    background: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* width:643px; */
+    border-radius: 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 10;
+  }
+  
+  .title-two {
+    font-size: 18px;
+    margin: 0;
+    font-weight: 500;
+    position: relative;
+    padding-bottom: 10px;
+    align-self: center;
+  }
+  
+  .title-two::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 20%;
+    width: 55%;
+    height: 1px;
+    background: rgb(4, 68, 121);
+  }
+  
+  .title-three {
+    margin: 10px 0 10px 0;
+    font-size: 22px;
+    font-weight: 600;
+    color:rgb(4, 68, 121);
+    align-self: center;
+  }
+  
+  .title-one {
+    margin: 0 0 10px 0;
+    color:rgb(4, 68, 121);
+    align-self: center;
+  }
+  
+  .popup__list {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    list-style: none;
+    
+  }
+  
+  .popup__list li {
+    margin-bottom: 8px;
+    white-space: pre-wrap;
+  }
+  
+  /* .popup__list li:last-of-type {
+    margin-bottom: 0;
+  } */
+  
+  .subtitle__one {
+    margin: 0 0 5px 0;
+    white-space: pre-wrap;
+  }
+  
+  .subtitle__two {
+    margin:10px 0 10px 0;
+    white-space: pre-wrap;
+  }
+  
+  .title-four {
+    font-weight: 500;
+    font-size: 18px;
+    align-self: center;
+    color:rgb(4, 68, 121);
+    text-align: center;
+    white-space: pre-wrap;
+  }
+  
+  .subtitle__three {
+    position: relative;
+    padding-bottom: 20px;
+    box-sizing: border-box;
+  }
+  
+  .subtitle__three::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left:5%;
+    width: 90%;
+    height: 1px;
+    background: rgb(4, 68, 121);
+  }
+  
+  .subtitle__two span {
+    color:rgb(4, 68, 121);
+    font-weight: 500;
+  }
+  
+  .close-button {
+    background: url('../../images/Close-popup.png');
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+  }
+  
+  .attempt {
+    width: 60px;
+    height: 40px;
+    background: -webkit-linear-gradient(rgb(43, 159, 241) 0%, rgb(27, 106, 164) 100%);
+    background: -moz-linear-gradient(rgb(43, 159, 241) 0%, rgb(27, 106, 164) 100%);
+    background: -o-linear-gradient(rgb(43, 159, 241) 0%, rgb(27, 106, 164) 100%);
+    background: linear-gradient(rgb(43, 159, 241) 0%, rgb(27, 106, 164) 100%);
+    margin-left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+    cursor: pointer;
+    border: none;
+    color: white;
+  }
+  
+  .color {
+    background: -webkit-linear-gradient(rgb(43, 159, 241) 0%, rgb(27, 106, 164) 100%);
+    background: -moz-linear-gradient(rgb(43, 159, 241) 0%, rgb(27, 106, 164) 100%);
+    background: -o-linear-gradient(rgb(43, 159, 241) 0%, rgb(27, 106, 164) 100%);
+    background: linear-gradient(rgb(43, 159, 241) 0%, rgb(27, 106, 164) 100%);
+  }
+  
+  .color-red {
+    background: red;
+  }
+  
+  @keyframes playerCard1 {
+    0% {
+        top: 0.5rem;
+        left: 27.5rem;
+    }
+    100% {
+        top: 0.3rem;
+        left: 0.5rem;
+    }
+  }
+  
+  @keyframes playerCard2 {
+    0% {
+        top: 0.5rem;
+        left: 27.5rem;
+    }
+    100% {
+        top: 0.3rem;
+        left: 3rem;
+    }
+  }
+  
+  @keyframes playerCard3 {
+    0% {
+        top: 0.5rem;
+        left: 27.5rem;
+    }
+    100% {
+        top: 0.3rem;
+        left: 6rem;
+    }
+  }
+  
+  @keyframes playerCard4 {
+    0% {
+        top: 0.5rem;
+        left: 27.5rem;
+    }
+    100% {
+        top: 0.3rem;
+        left: 9rem;
+    }
+  }
+  
+  @keyframes playerCard5 {
+    0% {
+        top: 0.5rem;
+        left: 27.5rem;
+    }
+    100% {
+        top: 0.3rem;
+        left: 12rem;
+    }
+  }
+  
+  @keyframes dealerCard1 {
+    0% {
+        top: -9.9rem;
+        left: 28.9rem;
+    }
+    100% {
+        top: 0.3rem;
+        left: 0.5rem;
+    }
+  }
+  
+  @keyframes dealerCard2 {
+    0% {
+        top: -9.9rem;
+        left: 28.9rem;
+    }
+    100% {
+        top: 0.3rem;
+        left: 3rem;
+    }
+  }
+  
+  @keyframes dealerCard3 {
+    0% {
+        top: -9.9rem;
+        left: 28.9rem;
+    }
+    100% {
+        top: 0.3rem;
+        left: 6rem;
+    }
+  }
+  @keyframes dealerCard4 {
+    0% {
+        top: -9.9rem;
+        left: 28.9rem;
+    }
+    100% {
+        top: 0.3rem;
+        left: 9rem;
+    }
+  }
+  @keyframes dealerCard5 {
+    0% {
+        top: -9.9rem;
+        left: 28.9rem;
+    }
+    100% {
+        top: 0.3rem;
+        left: 12rem;
+    }
+  }
+  
+  .card-player {
+    /* display: none; */
+    position: absolute;
+    top: 0.5rem;
+    left: 27.5rem;
+    box-shadow: -2px 0 6px 0px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    width: 98px;
+  }
+  
+  .card-dealer {
+    /* display: none; */
+    position: absolute;
+    top: -9.9rem;
+    left: 28.9rem;
+    box-shadow: -2px 0 6px 0px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    width: 98px;
+  }
+  
+  .player__card-1 { animation: playerCard1 .6s ease-out forwards; z-index: 1;}
+  .player__card-2 { animation: playerCard2 .6s .1s ease-out forwards; z-index: 1;}
+  .player__card-3 { animation: playerCard3 .6s ease-out forwards;z-index: 1;}
+  .player__card-4 { animation: playerCard4 .6s ease-out forwards;z-index: 1;}
+  .player__card-5 { animation: playerCard5 .6s ease-out forwards;z-index: 1;}
+  .dealer__card-1 { animation: dealerCard1 .6s .1s ease-out forwards;z-index: 1}
+  .dealer__card-2 { animation: dealerCard2 .6s .1s ease-out forwards;z-index: 1} 
+  .dealer__card-3 { animation: dealerCard3 .6s .1s ease-out forwards; z-index: 1;}
+  .dealer__card-4 { animation: dealerCard4 .6s .1s ease-out forwards; z-index: 1;}
+  .dealer__card-5 { animation: dealerCard5 .6s .1s ease-out forwards; z-index: 1;}
+  
+  .popup__winner {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.75);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.2s linear;
+  }
+  
+  .img-winner {
+    background: url('../../images/openpopup.png') center no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 33%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  
+  .title-winner {
+    color: #0fb7cf;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 32px;
+    font-weight: 400;
+    text-align: center;
+  }
+  
+  .money {
+    width: 200px;
+    min-height: 163px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    border-radius: 20px;
+    align-self: flex-end;
+    padding-bottom: 20px;
+    box-sizing: border-box;
+  }
+  
+  .money-rate {
+    width:100%;
+    height: 35px;
+    border-radius: 20px;
+    color: white;
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+    border: 1px solid white;
+    padding-left:68px;
+    box-sizing: border-box;
+  }
+  
+  .usd {
+    position: absolute;
+    left: -10px;
+    bottom: 10px;
+   
+    border-radius: 30px;
+  }
+
+  .usd__active {
+    box-shadow: 0 0 20px 5px red;
+  }
+  
+  .popup__active {
+    visibility: visible;
+    opacity: 1;
+    transition: 0.25s linear;
+    z-index: 10;
+  }
+  
+  .disabled {
+    pointer-events: none;
+    background: rgb(168, 167, 167)
+  }
+
+  .dispnone {
+      display: none;
+  }
+  
+  .color-red {
+    background: red;
+  }
+  
+  .color {
+    background: -webkit-linear-gradient(rgb(43, 159, 241) 0%, rgb(27, 106, 164) 100%);
+    background: -moz-linear-gradient(rgb(43, 159, 241) 0%, rgb(27, 106, 164) 100%);
+    background: -o-linear-gradient(rgb(43, 159, 241) 0%, rgb(27, 106, 164) 100%);
+    background: linear-gradient(rgb(43, 159, 241) 0%, rgb(27, 106, 164) 100%);
+  }
+  
+  .title__status {
+    color: #0fb7cf;
+    text-transform: uppercase;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 48px;
+    font-weight: 400;
+    z-index: 10;
+    text-align: center;
+  }
+  
+  .popup__notification {
+    color:black;
+  }
+  
+  .popup__notification-conten {
+    max-width: 810px;
+    background: white;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .button-register {
+    width: 197px;
+    height: 57px;
+    font-size: 22px;
+    background: -webkit-linear-gradient(rgb(28, 177, 182) 0%, rgb(19, 111, 114) 100%);
+    background: -o-linear-gradient(rgb(28, 177, 182) 0%, rgb(19, 111, 114) 100%);
+    background: linear-gradient(rgb(28, 177, 182) 0%, rgb(19, 111, 114) 100%);
+    border: none;
+    border-radius: 3px;
+    position: absolute;
+    top:80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    color: rgb(216, 215, 215);
+    justify-content: center;
+    align-items: center;
+    transition: 0.1s linear;
+    display: flex;
+    align-items: center;
+  }
+  
+  .button-register:hover {
+    box-shadow: 0 0 10px  rgb(104, 190, 211);
+  }
+  
+    @media screen and (max-width:1586px) {
+        .main__wrapper {
+            max-width: 883px;
+            margin: 0 auto;
+        }
+  
+        .card-player {
+            /* display: none; */
+            position: absolute;
+            top: 0.5rem;
+            left: 25.3em;
+            box-shadow: -2px 0 6px 0px rgba(0, 0, 0, 0.5);
+            border-radius: 5px;
+            width: 98px;
+        }
+        
+        .card-dealer {
+            /* display: none; */
+            position: absolute;
+            top: -9.9rem;
+            left: 26.9rem;
+            box-shadow: -2px 0 6px 0px rgba(0, 0, 0, 0.5);
+            border-radius: 5px;
+            width: 98px;
+        }
+  
+        .field-one {
+            width: 280px;
+        }
+        .field-two {
+            width: 280px;
+        }
+        .main__sewitch {
+            width: 140px;
+        }
+        .data-play {
+            margin-right: 20px;
+            margin-left: 83px;
+        }
+        .wrapper-card {
+            margin-left: 144px;
+            margin-right: 35px;
+        }
+  
+    @keyframes playerCard1 {
+        0% {
+            top: 0.5rem;
+            left: 25.3em;
+        }
+        100% {
+            top: 0.3rem;
+            left: 0.3em;
+        }
+    }
+  
+    @keyframes playerCard2 {
+        0% {
+            top: 0.5rem;
+            left: 25.3em;
+        }
+        100% {
+            top: 0.3rem;
+            left: 2.5em;
+        }
+    }
+  
+    @keyframes playerCard3 {
+        0% {
+            top: 0.5rem;
+            left: 25.3em;
+        }
+        100% {
+            top: 0.3rem;
+            left: 5em;
+        }
+    }
+  
+    @keyframes playerCard4 {
+        0% {
+            top: 0.5rem;
+            left: 25.3em;
+        }
+        100% {
+            top: 0.3rem;
+            left: 7.5em;
+        }
+    }
+  
+    @keyframes playerCard5 {
+        0% {
+            top: 0.5rem;
+            left: 25.3em;
+        }
+        100% {
+            top: 0.3rem;
+            left: 10em;
+        }
+    }
+  
+    @keyframes dealerCard1 {
+        0% {
+            top: -9.9rem;
+            left: 26.9rem;
+        }
+        100% {
+            top: 0.3rem;
+            left: 0.3em;
+        }
+    }
+  
+    @keyframes dealerCard2 {
+        0% {
+            top: -9.9rem;
+            left: 26.9rem;
+        }
+        100% {
+            top: 0.3rem;
+            left: 2.5em;
+        }
+    }
+  
+    @keyframes dealerCard3 {
+        0% {
+            top: -9.9rem;
+            left: 26.9rem;
+        }
+        100% {
+            top: 0.3rem;
+            left: 5em;
+        }
+    }
+    @keyframes dealerCard4 {
+        0% {
+            top: -9.9rem;
+            left: 26.9rem;
+        }
+        100% {
+            top: 0.3rem;
+            left: 7.5em;
+        }
+    }
+    @keyframes dealerCard5 {
+        0% {
+            top: -9.9rem;
+            left: 26.9rem;
+        }
+        100% {
+            top: 0.3rem;
+            left: 10em;
+        }
+    }
+  }
+  
+  @media screen and (max-width: 823px){
+    body {
+        overflow:hidden;
+    }
+    .App__background {
+        max-width: 823px;
+        max-height: 100vh;
+        background-size: 1200px;
+        margin: 0 auto;
+        box-shadow: 0 -20px 100px 50px inset black;
+        background-position: center center;
+        position: relative;
+    }
+    .header__content {
+        min-height: 54px;
+    }
+    .header__title {
+        font-size: 18px;
+    }
+    .header {
+        max-width: 1357px;
+        margin: 0 auto;
+        color: white;
+        min-height: 58px;
+        display: flex;
+        align-items: flex-start;
+    }
+    .logo {
+        width: 136px;
+        height: 62px;
+    }
+    .header__content-logo {
+        align-self: flex-start;
+    }
+    .main__wrapper {
+        height: 263px;
+    }
+    .rules {
+        display: none;
+    }
+    .field-one {
+        width: 247px;
+        height: 120px;
+    }
+    .field-two {
+        width: 247px;
+        height: 120px;
+    }
+    .main__kol {
+        width: 126px;
+        height: 138px;
+        background-size: 120px;
+    }
+    .main__container_number {
+        width: 56px;
+        height: 56px;
+    }
+    .win {
+        font-size: 11px;
+    }
+    .score {
+        width: 54px;
+        height: 27px;
+    }
+    
+    .main__sewitch {
+        width: 120px;
+        height: 29px;
+    }
+    .field-one__dialer {
+        font-size: 50px;
+    }
+    .switch-one {
+        margin-top: 15px;
+    }
+    .main__sewitch {
+        margin-bottom: 16px;
+    }
+    .wrapper-card {
+        margin-left: 134px;
+        margin-right: 54px;
+    }
+    .data-play {
+        margin-right: 5px;
+        margin-left: 121px;
+    }
+    .rate-container {
+        max-width: 724px;
+        margin: 16px auto 0 auto;
+        height: 44px;
+    }
+    .input-rate {
+        margin-right: 23px;
+        margin-left: 12px;
+    }
+    .attempt {
+        width: 68px;
+    }
+    .button-rate {
+        margin: 0 20px 0 37px;
+    }
+    .card-player {
+        width: 76px;
+        top: 1.3rem;
+        left: 23.5em;
+    }
+    .card-dealer {
+        width: 76px;
+        top: -6.9rem;
+        left: 22.5rem;
+    }
+    .title-winner {
+        font-size: 27px;
+        top: 78%;
+        
+    }
+    .title__status {
+        font-size: 33px;
+    }
+    @keyframes playerCard1 {
+        0% {
+            top: 1.3rem;
+            left: 23.5em;
+        }
+        100% {
+            top: 0.3rem;
+            left: 0.3em;
+        }
+    }
+  
+    @keyframes playerCard2 {
+        0% {
+            top: 1.3rem;
+            left: 23.5em;
+        }
+        100% {
+            top: 0.3rem;
+            left: 2.5em;
+        }
+    }
+  
+    @keyframes playerCard3 {
+        0% {
+            top: 1.3rem;
+            left: 23.5em;
+        }
+        100% {
+            top: 0.3rem;
+            left: 5em;
+        }
+    }
+  
+    @keyframes playerCard4 {
+        0% {
+            top: 1.3rem;
+            left: 23.5em;
+        }
+        100% {
+            top: 0.3rem;
+            left: 7.5em;
+        }
+    }
+  
+    @keyframes playerCard5 {
+        0% {
+            top: 1.3rem;
+            left: 23.5em;
+        }
+        100% {
+            top: 0.3rem;
+            left: 10em;
+        }
+    }
+  
+    @keyframes dealerCard1 {
+        0% {
+            top: -6.9rem;
+            left: 22.5rem;
+        }
+        100% {
+            top: 0.3rem;
+            left: 0.3em;
+        }
+    }
+  
+    @keyframes dealerCard2 {
+        0% {
+            top: -6.9rem;
+            left: 22.5rem;
+        }
+        100% {
+            top: 0.3rem;
+            left: 2.5em;
+        }
+    }
+  
+    @keyframes dealerCard3 {
+        0% {
+            top: -6.9rem;
+            left: 22.5rem;
+        }
+        100% {
+            top: 0.3rem;
+            left: 5em;
+        }
+    }
+    @keyframes dealerCard4 {
+        0% {
+            top: -6.9rem;
+            left: 22.5rem;
+        }
+        100% {
+            top: 0.3rem;
+            left: 7.5em;
+        }
+    }
+    @keyframes dealerCard5 {
+        0% {
+            top: -6.9rem;
+            left: 22.5rem;
+        }
+        100% {
+            top: 0.3rem;
+            left: 10em;
+        }
+    }
+  
+  }
+  @media screen and (max-width:812px){
+    body {
+        overflow: hidden;
+    }
+    .App__background {
+        background-size: 987px;
+        
+    }
+    .header__content-logo {
+        align-self: flex-end;
+    }
+    .header__title {
+        margin: 0 0 0 26px;
+        text-transform: uppercase;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .field-one {
+        width: 181px;
+        height: 98px;
+    }
+    .field-two {
+        width: 181px;
+        height: 98px;
+    }
+    .main__kol {
+        height: 138px;
+        background-size: 98px;
+        width: 104px;
+        height: 113px;
+    }
+    .main__container_number {
+        width: 46px;
+        height: 46px;
+    }
+    .title__status {
+        font-size: 20px;
+    }
+    .data-play__general {
+        margin-bottom: 4px;
+    }
+    .field-one__dialer {
+        font-size: 33px;
+    }
+    .rate-container {
+        margin: 0px auto 0 auto;
+        height: 49px;
+        background: rgb(173, 172, 172, 0.4);
+        border-radius: 5px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        max-width: 900px;
+    }
+    .attempt {
+        width: 42px;
+        height: 28px;
+    }
+    .button-rate {
+        width: 142px;
+        height: 28px;
+        margin: 0 20px 0 70px;
+    }
+    .input-rate {
+        height: 28px;
+    }
+    .logo {
+        width: 107px;
+        height: 46px;
+    }
+    .money {
+        margin-bottom: 6px;
+        width: 140px;
+    }
+    .header { 
+        margin: 0 auto; 
+        padding: 5px 0 0 0; 
+    }
+    .money-rate {
+        width: 89px;
+    }
+    .win {
+        font-size: 9px;
+    }
+    .wrapper-card {
+        margin-left: 106px;
+        margin-right: 81px;
+    }
+    .data-play {
+        margin-right: -19px;
+        margin-left: 141px;
+    }
+    .button-register {
+        width: 125px;
+        height: 36px;
+        font-size: 14px;
+    }
+    .card-player {
+        width: 61px;
+        top: 0.3rem;
+        left: 18.5em;
+    }
+    .card-dealer {
+        width: 61px;
+        top: -6.7rem;
+        left: 17.5em;
+    }
+  
+    @keyframes playerCard1 {
+        0% {
+            top: 0.3rem;
+            left: 18.5em;
+        }
+        100% {
+            top: 0.3rem;
+            left: 0.3em;
+        }
+    }
+  
+    @keyframes playerCard2 {
+        0% {
+            top: 0.3rem;
+            left: 18.5em;
+        }
+        100% {
+            top: 0.3rem;
+            left: 1.5em;
+        }
+    }
+  
+    @keyframes playerCard3 {
+        0% {
+            top: 0.3rem;
+            left: 18.5em;
+        }
+        100% {
+            top: 0.3rem;
+            left: 3em;
+        }
+    }
+  
+    @keyframes playerCard4 {
+        0% {
+            top: 0.3rem;
+            left: 18.5em;
+        }
+        100% {
+            top: 0.3rem;
+            left: 4.5em;
+        }
+    }
+  
+    @keyframes playerCard5 {
+        0% {
+            top: 0.3rem;
+            left: 18.5em;
+        }
+        100% {
+            top: 0.3rem;
+            left: 6em;
+        }
+    }
+  
+    @keyframes dealerCard1 {
+        0% {
+            top: -6.7rem;
+            left: 17.5em;
+        }
+        100% {
+            top: 0.3rem;
+            left: 0.3em;
+        }
+    }
+  
+    @keyframes dealerCard2 {
+        0% {
+            top: -6.7rem;
+            left: 17.5em;
+        }
+        100% {
+            top: 0.3rem;
+            left: 1.5em;
+        }
+    }
+  
+    @keyframes dealerCard3 {
+        0% {
+            top: -6.7rem;
+            left: 17.5em;
+        }
+        100% {
+            top: 0.3rem;
+            left: 3em;
+        }
+    }
+    @keyframes dealerCard4 {
+        0% {
+            top: -6.7rem;
+            left: 17.5em;
+        }
+        100% {
+            top: 0.3rem;
+            left: 4.5em;
+        }
+    }
+    @keyframes dealerCard5 {
+        0% {
+            top: -6.7rem;
+            left: 17.5em;
+        }
+        100% {
+            top: 0.3rem;
+            left: 6em;
+        }
+    }
+    .main__container_number {
+        font-size: 25px;
+    }
+    .score {
+        font-size: 19px;
+    }
+    .attempt {
+        font-size: 14px;
+    }
+    .main__sewitch {
+        width: 103px;
+    }
+    .button-rate {
+        font-size: 14px;
+    }
+    .main__sewitch {
+        font-size: 15px;
+    }
+  }
+  @media screen  and (max-width: 736px) {
+    .main__container_number {
+        margin-left: 13px;
+    }
+    .wrapper-card {
+        margin-left: 129px;
+        margin-right: 63px;
+    }
+    .title__status {
+        font-size: 18px;
+    }
+    .data-play {
+        margin-right: 9px;
+        margin-left: 126px;
+    }
+    .card-player {
+        left: 16.5em;
+    }
+    @keyframes playerCard2 {
+        0% {
+            top: 0.3rem;
+            left: 16.5em;
+        }
+        100% {
+            top: 0.3rem;
+            left: 1.5em;
+        }
+    }
+  }
+  
+  @media screen  and (max-width: 667px) {
+    .App__background {
+        background-size: 824px;
+    }
+    .field-one {
+        width: 129px;
+        height: 75px;
+    }
+    .field-two {
+        width: 129px;
+        height: 75px;
+    }
+    .main__wrapper {
+        height: 209px;
+    }
+    .main__kol {
+        background-size: 75px;
+        width: 75px;
+        height: 84px;
+        margin-top: 10px;
+    }
+    .main__sewitch {
+        width: 78px;
+    }
+    .money {
+        width: 111px;
+        height: 31px;
+    }
+    .money-rate {
+        font-size: 17px;
+        width: 59px;
+    }
+    .title__status {
+        font-size: 28px;
+    }
+    .title-winner {
+        font-size: 23px;
+        
+    }
+    .usd {
+        width: 50px;
+        height: 50px;
+    }
+    .data-play {
+        margin-right: 22px;
+        margin-left: 172px;
+    }
+    .field-one__dialer {
+        font-size: 24px;
+    }
+    .button-rate {
+        margin: 0 20px 0 17px;
+        font-size: 11px;
+    }
+    .attempt {
+        width: 87px;
+        font-size: 12px;
+        display: flex;
+        align-items: center;
+    }
+    .input-rate {
+        margin-right: 6px;
+        font-size: 21px;
+    }
+    .main__container_number {
+        font-size: 20px;
+    }
+    .button-register {
+        width: 114px;
+        height: 32px;
+        font-size: 12px;
+        margin-top: 5px;
+    }
+    .card-player {
+        width: 46px;
+        top: 0.3rem;
+        left: 13.2em;
+    }
+    .card-dealer {
+        width: 46px;
+        top: -5.7rem;
+        left: 13.5em;
+    }
+    @keyframes playerCard1 {
+        0% {
+            top: 0.3rem;
+            left: 13.2em;
+        }
+        100% {
+            top: 0.3rem;
+            left: 0.3em;
+        }
+    }
+    @keyframes playerCard2 {
+        0% {
+            top: 0.3rem;
+            left: 13.2em;
+        }
+        100% {
+            top: 0.3rem;
+            left: 1.2em;
+        }
+    }
+    @keyframes playerCard3 {
+        0% {
+            top: 0.3rem;
+            left: 13.2em;
+        }
+        100% {
+            top: 0.3rem;
+            left: 2.4em;
+        }
+    }
+    @keyframes playerCard4 {
+        0% {
+            top: 0.3rem;
+            left: 13.2em;
+        }
+        100% {
+            top: 0.3rem;
+            left: 3.6em;
+        }
+    }
+    @keyframes playerCard5 {
+        0% {
+            top: 0.3rem;
+            left: 13.2em;
+        }
+        100% {
+            top: 0.3rem;
+            left: 4.8em;
+        }
+    }
+    @keyframes dealerCard1 {
+        0% {
+            top: -5.7rem;
+            left: 13.5em;
+        }
+        100% {
+            top: 0.3rem;
+            left: 0.3em;
+        }
+    }
+    @keyframes dealerCard2 {
+        0% {
+            top: -5.7rem;
+            left: 13.5em;
+        }
+        100% {
+            top: 0.3rem;
+            left: 1.2em;
+        }
+    }
+    @keyframes dealerCard3 {
+        0% {
+            top: -5.7rem;
+            left: 13.5em;
+        }
+        100% {
+            top: 0.3rem;
+            left: 2.4em;
+        }
+    }
+    @keyframes dealerCard4 {
+        0% {
+            top: -5.7rem;
+            left: 13.5em;
+        }
+        100% {
+            top: 0.3rem;
+            left: 3.6em;
+        }
+    }
+    @keyframes dealerCard5 {
+        0% {
+            top: -5.7rem;
+            left: 13.5em;
+        }
+        100% {
+            top: 0.3rem;
+            left: 4.8em;
+        }
+    }
+    .main__sewitch {
+        font-size: 13px;
+        height: 24px;
+        width: 75px;
+    }
+  }
+  
+  

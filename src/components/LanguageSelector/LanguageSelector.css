@@ -1,0 +1,19 @@
+.languageSelector__container {
+    padding-top: 20px;
+    box-sizing: border-box;
+}
+
+.languageSelector {
+    background-color: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.languageSelector__option {
+    cursor: pointer;
+}
+
+.selectLanguage {
+    margin: 0 0 5px 0;
+}
